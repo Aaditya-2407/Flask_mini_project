@@ -1,2 +1,4 @@
 flask
 pymupdf
+google-generativeai
+python-dotenv
