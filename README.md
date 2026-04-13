@@ -1,21 +1,15 @@
-# 📝 PDF MCQ Generator
-
-An AI-powered web application that transforms PDF documents into interactive Multiple Choice Questions. Built with **Flask** and **Google Gemini**, this project demonstrates a complete AI integration pipeline.
-
----
-
-## 🚀 Getting Started
+🚀 Getting Started
 
 Follow these steps to set up the project on your local machine.
 
-### 1. Clone the Repository
-```bash
+1. Clone the Repository
+
 git clone [https://github.com/Aaditya-2407/Flask_mini_project](https://github.com/Aaditya-2407/Flask_mini_project)
 cd Flask_mini_project
-2. Set Up Virtual Environment
-Isolation ensures that your dependencies don't conflict with other projects.
 
-Bash
+
+2. Set Up Virtual Environment
+
 # Create the virtual environment
 python3 -m venv .venv
 
@@ -25,11 +19,14 @@ source .venv/bin/activate
 
 # On Windows:
 .venv\Scripts\activate
+
+
 3. Install Dependencies
-Bash
+
 pip install -r requirements.txt
+
+
 4. Configure API Keys
-The application uses Google Gemini to generate questions.
 
 Create a file named .env in the root folder.
 
@@ -37,22 +34,26 @@ Get a free API Key from Google AI Studio.
 
 Add your key to the .env file:
 
-Code snippet
 GEMINI_API_KEY=your_actual_api_key_here
+
+
 5. Run the Application
-Bash
+
 python run.py
+
+
 Open your browser and navigate to: http://127.0.0.1:5000
 
 🛠️ How It Works
-Extraction: The app uses PyMuPDF to read the raw text from your uploaded PDF.
 
-AI Processing: The text is sent to the gemini-1.5-flash model with instructions to return a structured JSON object.
+Extraction: Uses PyMuPDF (fitz) to read raw text from your PDF.
 
-Frontend Rendering: JavaScript parses the JSON and dynamically builds the quiz UI.
+AI Processing: Sends text to gemini-1.5-flash to generate a JSON object.
+
+Frontend Rendering: JavaScript parses the JSON to build the quiz UI.
 
 📂 Project Structure
-Plaintext
+
 Flask_mini_project/
 ├── app/
 │   ├── templates/      # HTML UI files
