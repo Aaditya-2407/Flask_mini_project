@@ -7,7 +7,6 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 def generate_mcqs(text):
-    # Use gemini-2.5-flash or gemini-flash-latest as gemini-1.5-flash is not available
     model = genai.GenerativeModel('models/gemini-2.5-flash')
     
     prompt = f"""
