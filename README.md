@@ -61,7 +61,7 @@ Open your browser and navigate to: **http://127.0.0.1:5000**
 
 1. **Extraction**: Uses PyMuPDF (`fitz`) to read raw text from your PDF
 2. **AI Processing**: Sends text to `gemini-1.5-flash` to generate a structured JSON object
-3. **Frontend Rendering**: JavaScript parses the JSON to build an interactive quiz UI
+
 
 ---
 
