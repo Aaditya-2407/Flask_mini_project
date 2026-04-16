@@ -1,59 +1,39 @@
+📚 Flask MCQ Generator
+Generate interactive multiple-choice quizzes from PDF documents using AI-powered extraction and processing.
+
 🚀 Getting Started
-
 Follow these steps to set up the project on your local machine.
-
 1. Clone the Repository
-
-git clone [https://github.com/Aaditya-2407/Flask_mini_project](https://github.com/Aaditya-2407/Flask_mini_project)
+bashgit clone https://github.com/Aaditya-2407/Flask_mini_project
 cd Flask_mini_project
-
-
 2. Set Up Virtual Environment
-
-# Create the virtual environment
-python3 -m venv .venv
-
-# Activate the virtual environment
-# On macOS/Linux:
+On macOS/Linux:
+bashpython3 -m venv .venv
 source .venv/bin/activate
-
-# On Windows:
+On Windows:
+cmdpython3 -m venv .venv
 .venv\Scripts\activate
-
-
 3. Install Dependencies
-
-pip install -r requirements.txt
-
-
+bashpip install -r requirements.txt
 4. Configure API Keys
 
-Create a file named .env in the root folder.
-
-Get a free API Key from Google AI Studio.
-
+Create a file named .env in the root folder
+Get a free API Key from Google AI Studio
 Add your key to the .env file:
 
-GEMINI_API_KEY=your_actual_api_key_here
-
-
+plaintextGEMINI_API_KEY=your_actual_api_key_here
 5. Run the Application
-
-python run.py
-
-
+bashpython run.py
 Open your browser and navigate to: http://127.0.0.1:5000
 
 🛠️ How It Works
 
-Extraction: Uses PyMuPDF (fitz) to read raw text from your PDF.
+Extraction: Uses PyMuPDF (fitz) to read raw text from your PDF
+AI Processing: Sends text to gemini-1.5-flash to generate a structured JSON object
+Frontend Rendering: JavaScript parses the JSON to build an interactive quiz UI
 
-AI Processing: Sends text to gemini-1.5-flash to generate a JSON object.
-
-Frontend Rendering: JavaScript parses the JSON to build the quiz UI.
 
 📂 Project Structure
-
 Flask_mini_project/
 ├── app/
 │   ├── templates/      # HTML UI files
@@ -64,3 +44,15 @@ Flask_mini_project/
 ├── run.py              # Main entry point
 ├── .env                # API Keys (Git ignored)
 └── requirements.txt    # Project dependencies
+
+📋 Requirements
+
+Python 3.8+
+Flask
+PyMuPDF (fitz)
+Google Generative AI SDK
+python-dotenv
+
+
+🔐 Environment Variables
+VariableDescriptionRequiredGEMINI_API_KEYYour Google AI Studio API keyYes
